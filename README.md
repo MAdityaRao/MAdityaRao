@@ -1,60 +1,78 @@
-# Hi, I'm Aditya👋
+# Hey there, I'm Aditya! 🚀
 
-🚀 Full Stack Developer & AI Engineer  
-📍 Karnataka, India  
+I’m a **Full Stack Developer** and **AI Engineer** who loves building things that actually work in the real world. While I enjoy the entire stack, my current obsession is **Voice AI**—specifically, how to make AI conversations feel as fluid and natural as talking to a friend.
 
-I’m a passionate developer who loves building **real-world applications** using **AI, data, and full-stack technologies**.  
-I enjoy turning ideas into working products and constantly learning by building projects, participating in hackathons, and experimenting with new tech.
+Based in Karnataka, India, I spend my time bridging the gap between complex machine learning models and the people who need them.
 
 ---
 
-## 💡 What I Do
-- 🤖 Build AI & ML models for real-world problems  
-- 🌐 Develop full-stack web applications  
-- 📊 Work on data analytics & predictive models  
-- 🧠 Explore Agentic AI and automation systems  
+### 🛠 What I’m good at
+
+I don't just write code; I build infrastructure that scales. My toolkit is a mix of high-level AI orchestration and gritty backend engineering:
+
+* 
+**The AI Side:** I specialize in **LiveKit** for ultra-low latency voice agents (we're talking sub-500ms response times). I also work with **LangChain** and **RAG** to give LLMs a "memory" and a source of truth.
+
+
+* 
+**The Full Stack Side:** I’m a **Python** and **Node.js** enthusiast. I’ve got hands-on experience integrating everything from **Razorpay** for payments to **Shiprocket** for logistics.
+
+
+* **The Cloud Side:** I believe a project isn't finished until it's deployed. I handle my own DevOps on **AWS**, managing everything from S3 buckets to Route53 DNS settings.
+
+
 
 ---
 
-## 🛠 Tech Stack
-**Languages:**  
-Python, JavaScript, SQL  
+### 🌟 Projects I’m Proud Of
 
-**Frameworks & Tools:**  
-React, FastAPI, Flask, Node.js  
+#### **TorqAgents — Voice Intelligence Platform**
 
-**AI / ML:**  
-TensorFlow, PyTorch, Scikit-learn, Pandas, NumPy  
+This is my "flagship" project. It’s a production-ready voice AI that handles conversations with human-like speed. I built the secure token-based backend and a custom frontend that visualizes audio waveforms in real-time.
 
-**Databases & Dev Tools:**  
-MySQL, Git, GitHub, Linux  
+* 
+**Tech:** LiveKit, Node.js, Express, WebSockets.
 
----
 
-## 📌 Featured Projects
-- 🌾 **Predictive Analytics for Agricultural Prices**  
-  LSTM-based models for Arecanut, Paddy & Coconut price prediction  
 
-- 🤖 **AI Agents & Automation Tools**  
-  Resume–JD matching, AI assistants, workflow automation  
+#### **Areca Nut Price Predictor**
 
-- 🌐 **Full Stack Web Projects**  
-  End-to-end apps with frontend, backend, and database integration  
+Living in Karnataka, I wanted to build something for the local community. I developed an **LSTM time-series model** that helps farmers predict price trends so they know the best time to sell their harvest.
 
----
+* 
+**Tech:** Python, Pandas, LSTM.
 
-## 🎯 Current Focus
-- Improving system design & backend scalability  
-- Building production-ready AI projects  
-- Hackathons & open-source contributions  
+
+
+#### **JD-Aware Screening Agent**
+
+I got tired of "black box" AI, so I built an agent that screens candidates using **Retrieval-Augmented Generation (RAG)**. It evaluates role fit strictly based on verified experience, making the hiring process transparent and fair.
 
 ---
 
-## 🔗 Connect With Me
-- 🌐 Portfolio: https://madityarao.github.io/Resume/  
-- 💼 LinkedIn: https://www.linkedin.com/in/aditya-rao-81832132b/  
-- 📧 Email: madityara5@gmail.com  
+### 📈 Experience
+
+**Technical Solutions Partner @ Torq Designs** *(2024 – Present)* I helped pivot a design agency into a tech-driven solutions firm. Instead of just "making things look pretty," I started building custom automations and e-commerce infrastructures that solved real operational headaches for our clients.
 
 ---
 
-⭐ *I believe in learning by building and growing through real projects.*
+### 🤝 Let's Connect!
+
+I’m always down to talk about AI, automation, or the latest tech trends.
+
+* 
+**Portfolio:** [madityarao.github.io/Resume/](https://www.google.com/search?q=https://madityarao.github.io/Resume/) 
+
+
+* 
+**LinkedIn:** [Aditya Rao](https://www.google.com/search?q=https://www.linkedin.com/in/aditya-rao-81832132b/) 
+
+
+* 
+**Email:** [madityara5@gmail.com](mailto:madityara5@gmail.com) 
+
+
+
+---
+
+**Current Goal:** Continuing to push the boundaries of what's possible with real-time AI agents.
