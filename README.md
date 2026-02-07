@@ -61,7 +61,7 @@ I got tired of "black box" AI, so I built an agent that screens candidates using
 I’m always down to talk about AI, automation, or the latest tech trends.
 
 * 
-**Portfolio:** [madityarao.github.io/Resume/](https://www.google.com/search?q=https://madityarao.github.io/Resume/) 
+**Portfolio:** [madityarao.github.io/Resume/](https://www.google.com/search?q=https://madityarao.github.io/Resume_web/) 
 
 
 * 
