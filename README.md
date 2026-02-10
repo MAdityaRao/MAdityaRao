@@ -65,7 +65,7 @@ I’m always down to talk about AI, automation, or the latest tech trends.
 
 
 * 
-**LinkedIn:** [Aditya Rao](https://www.google.com/search?q=https://www.linkedin.com/in/aditya-rao-81832132b/) 
+**LinkedIn:** [Aditya Rao]( https://www.linkedin.com/in/aditya-rao-81832132b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app)
 
 
 * 
