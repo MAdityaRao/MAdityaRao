@@ -73,7 +73,7 @@ Time-series ML model for predicting commodity price trends using LSTM.
 
 ## 🤝 Contact
 
-- Portfolio: https://madityarao.github.io/Resume_web/
+- Portfolio:https://resume-web-liard.vercel.app/
 - Email: madityara5@gmail.com
 
 ---
