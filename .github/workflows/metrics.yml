@@ -19,10 +19,11 @@ jobs:
       - uses: lowlighter/metrics@latest
         with:
           # === Auth ===
-          # A default GITHUB_TOKEN can only see the profile repo itself, which is
-          # why Projects / Habits / Recent Activity plugins show "Unexpected error"
-          # without this. Use a Personal Access Token stored as METRICS_TOKEN
-          # (see SETUP_INSTRUCTIONS.md for exactly which scopes to check).
+          # MUST be a CLASSIC personal access token (starts with ghp_), added as a
+          # REPOSITORY secret (Settings -> Secrets and variables -> Actions -> Secrets
+          # tab -> "New repository secret"), not an Environment secret, and not a
+          # fine-grained token (those aren't supported by this action at all).
+          # See SETUP_INSTRUCTIONS.md.
           token: ${{ secrets.METRICS_TOKEN }}
           user: MAdityaRao
           filename: github-metrics.svg
@@ -30,19 +31,40 @@ jobs:
           # === Base panel ===
           base: header, activity, community, repositories, metadata
 
-          # === Gold / white theme (matches the amber portfolio accent) ===
           config_timezone: Asia/Kolkata
           config_display: large
-          config_theme: dark
           config_gemoji: img
           config_base64: yes
 
-          # Custom palette override: amber gold on near-black, white text
-          config_theme_dark_background: 0D1117
-          config_theme_dark_border: F5A62333
-          config_theme_dark_color: F5A623
-          config_theme_dark_text: F2F2F2
-          config_theme_dark_icon: F5A623
+          # === Gold / white theme ===
+          # Theming this action isn't done through config_theme_* flags (those don't
+          # exist) — it's done by injecting raw CSS that overrides the template's
+          # colors. This repaints the default dark template in amber/white to match
+          # the portfolio's accent.
+          extras_css: |
+            :root {
+              --color-content-default: #F2F2F2 !important;
+              --color-fill-default: #F5A623 !important;
+              --color-fill-alt: #F5A623 !important;
+              --color-border-default: #F5A62355 !important;
+            }
+            svg, .metrics-container-bg {
+              fill: #0D1117 !important;
+            }
+            text, tspan {
+              fill: #F2F2F2 !important;
+            }
+            text.large, h1, h2, h3, .title,
+            [class*="title"], [class*="header"] {
+              fill: #F5A623 !important;
+              color: #F5A623 !important;
+            }
+            rect, path, circle, polygon {
+              stroke: #F5A62355;
+            }
+            .octicon, svg[class*="icon"] {
+              fill: #F5A623 !important;
+            }
 
           # === Plugins (mirrors the reference: calendar, languages, activity, topics) ===
           plugin_calendar: yes
