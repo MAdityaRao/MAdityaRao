@@ -12,7 +12,7 @@
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-resume--web--liard.vercel.app-0f0f0f?style=for-the-badge&logo=vercel&logoColor=F5A623&labelColor=000000)](https://resume-web-liard.vercel.app/)
 [![GitHub](https://img.shields.io/badge/GitHub-MAdityaRao-0f0f0f?style=for-the-badge&logo=github&logoColor=F5A623&labelColor=000000)](https://github.com/MAdityaRao)
-[![Email](https://img.shields.io/badge/Email-madityara5%40gmail.com-0f0f0f?style=for-the-badge&logo=gmail&logoColor=F5A623&labelColor=000000)](mailto:madityara5@gmail.com)
+[![Email](https://img.shields.io/badge/Email-madityarao5%40gmail.com-0f0f0f?style=for-the-badge&logo=gmail&logoColor=F5A623&labelColor=000000)](mailto:madityarao5@gmail.com)
 
 </div>
 
@@ -219,11 +219,23 @@ This same shape — frontend, token API, independent agent, shared database, das
 | [`Resume_agent`](https://github.com/MAdityaRao/Resume_agent) | Resume-grounded voice interview agent |
 | [`arecanut_lstm`](https://github.com/MAdityaRao/arecanut_lstm) | Arecanut price forecasting — LSTM model |
 | [`arecanut_rnn`](https://github.com/MAdityaRao/arecanut_rnn) | Arecanut price forecasting — SimpleRNN comparison |
-| [`nurse_note_ai`](https://github.com/MAdityaRao/nurse_note_ai) / [`nursenote-ai`](https://github.com/MAdityaRao/nursenote-ai) | Nursing/clinical note AI tooling |
+| [`nurse_note_ai`](https://github.com/MAdityaRao/nurse_note_ai) | Nursing/clinical note AI tooling |
 | [`pdubelman_temple`](https://github.com/MAdityaRao/pdubelman_temple) | Temple website build |
 | [`mar-lang`](https://github.com/MAdityaRao/mar-lang) / [`marlang_web`](https://github.com/MAdityaRao/marlang_web) | Language project + web frontend |
 | [`farm_finance`](https://github.com/MAdityaRao/farm_finance) | Agricultural finance project |
 | [`java_dsa`](https://github.com/MAdityaRao/java_dsa) | Data structures & algorithms practice, Java |
+
+</div>
+
+<br/>
+
+## 📊 GitHub Metrics
+
+<div align="center">
+
+<img src="https://raw.githubusercontent.com/MAdityaRao/MAdityaRao/main/github-metrics.svg" alt="Aditya's GitHub metrics — animated isometric calendar, activity, languages, and topics" width="100%"/>
+
+<sub>Live, auto-refreshing daily via <a href="https://github.com/lowlighter/metrics">lowlighter/metrics</a> · gold/white themed to match the portfolio accent</sub>
 
 </div>
 
@@ -265,7 +277,7 @@ If you're working on voice AI that needs to hold up under real call volume, LLM 
 
 <div align="center">
 
-[![Email](https://img.shields.io/badge/madityara5%40gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:madityara5@gmail.com)
+[![Email](https://img.shields.io/badge/madityarao5%40gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:madityarao5@gmail.com)
 [![Portfolio](https://img.shields.io/badge/resume--web--liard.vercel.app-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://resume-web-liard.vercel.app/)
 [![GitHub](https://img.shields.io/badge/MAdityaRao-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/MAdityaRao)
 
