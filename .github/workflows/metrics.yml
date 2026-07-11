@@ -19,9 +19,11 @@ jobs:
       - uses: lowlighter/metrics@latest
         with:
           # === Auth ===
-          # Uses the default token — no extra secret needed for public data.
-          # For private repos / extra plugins you can swap in a PAT stored as METRICS_TOKEN.
-          token: ${{ secrets.GITHUB_TOKEN }}
+          # A default GITHUB_TOKEN can only see the profile repo itself, which is
+          # why Projects / Habits / Recent Activity plugins show "Unexpected error"
+          # without this. Use a Personal Access Token stored as METRICS_TOKEN
+          # (see SETUP_INSTRUCTIONS.md for exactly which scopes to check).
+          token: ${{ secrets.METRICS_TOKEN }}
           user: MAdityaRao
           filename: github-metrics.svg
 
