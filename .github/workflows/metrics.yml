@@ -107,4 +107,4 @@ jobs:
           plugin_followup: yes
           plugin_followup_sections: pr, issue
 
-          plugin_projects: yes
+          
