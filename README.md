@@ -11,9 +11,6 @@
 <a href="https://resume-web-liard.vercel.app/">
 <img src="https://img.shields.io/badge/Portfolio-17130F?style=for-the-badge&logo=vercel&logoColor=D97757&labelColor=0B0906" alt="Portfolio"/>
 </a>
-<a href="https://github.com/MAdityaRao">
-<img src="https://img.shields.io/badge/GitHub-17130F?style=for-the-badge&logo=github&logoColor=D97757&labelColor=0B0906" alt="GitHub"/>
-</a>
 <a href="mailto:madityarao5@gmail.com">
 <img src="https://img.shields.io/badge/Email-17130F?style=for-the-badge&logo=gmail&logoColor=D97757&labelColor=0B0906" alt="Email"/>
 </a>
@@ -465,11 +462,6 @@ If you're working on voice AI that needs to hold up under real call volume, LLM 
 </a>
 </td>
 <td>
-<a href="https://github.com/MAdityaRao">
-<img src="https://img.shields.io/badge/GitHub-17130F?style=for-the-badge&logo=github&logoColor=D97757&labelColor=0B0906" alt="GitHub"/>
-</a>
-</td>
-<td>
 <a href="mailto:madityarao5@gmail.com">
 <img src="https://img.shields.io/badge/Email-17130F?style=for-the-badge&logo=gmail&logoColor=D97757&labelColor=0B0906" alt="Email"/>
 </a>
@@ -477,6 +469,7 @@ If you're working on voice AI that needs to hold up under real call volume, LLM 
 </tr>
 </table>
 <br/>
- Profile Views 
+<img src="https://komarev.com/ghpvc/?username=MAdityaRao&label=Profile%20Views&color=D97757&style=for-the-badge" alt="Profile Views"/>
+<br/><br/>
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:17130F,30:2A1F17,60:3D2A1E,100:D97757&height=120&section=footer"/>
 </div>
