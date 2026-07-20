@@ -1,18 +1,18 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f0f0f,100:1a1a1a&height=220&section=header&text=Aditya%20Rao&fontSize=60&fontColor=F5A623&animation=fadeIn&fontAlignY=38&desc=AI%20Engineer%20%E2%80%94%20Voice%20AI%20Systems%20%C2%B7%20LLM%20Applications%20%C2%B7%20Production%20Backends&descAlignY=58&descSize=18&descColor=CFCFCF"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:17130F,100:1F1911&height=220&section=header&text=Aditya%20Rao&fontSize=60&fontColor=D97757&animation=fadeIn&fontAlignY=38&desc=AI%20Engineer%20%E2%80%94%20Voice%20AI%20Systems%20%C2%B7%20LLM%20Applications%20%C2%B7%20Production%20Backends&descAlignY=58&descSize=18&descColor=A8A29E"/>
 
 <br/>
 
 <a href="https://resume-web-liard.vercel.app/">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=22&duration=3000&pause=800&color=F5A623&center=true&vCenter=true&multiline=true&repeat=true&width=700&height=90&lines=I+design+and+ship+real-time+voice+AI+agents...;...and+the+backend+systems+that+keep+them+correct.;My+work+lives+in+production%2C+not+in+notebooks." alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=22&duration=3000&pause=800&color=D97757&center=true&vCenter=true&multiline=true&repeat=true&width=700&height=90&lines=I+design+and+ship+real-time+voice+AI+agents...;...and+the+backend+systems+that+keep+them+correct.;My+work+lives+in+production%2C+not+in+notebooks." alt="Typing SVG" />
 </a>
 
 <br/><br/>
 
-[![Portfolio](https://img.shields.io/badge/Portfolio-resume--web--liard.vercel.app-0f0f0f?style=for-the-badge&logo=vercel&logoColor=F5A623&labelColor=000000)](https://resume-web-liard.vercel.app/)
-[![GitHub](https://img.shields.io/badge/GitHub-MAdityaRao-0f0f0f?style=for-the-badge&logo=github&logoColor=F5A623&labelColor=000000)](https://github.com/MAdityaRao)
-[![Email](https://img.shields.io/badge/Email-madityarao5%40gmail.com-0f0f0f?style=for-the-badge&logo=gmail&logoColor=F5A623&labelColor=000000)](mailto:madityarao5@gmail.com)
+[![Portfolio](https://img.shields.io/badge/Portfolio-resume--web--liard.vercel.app-17130F?style=for-the-badge&logo=vercel&logoColor=D97757&labelColor=0B0906)](https://resume-web-liard.vercel.app/)
+[![GitHub](https://img.shields.io/badge/GitHub-MAdityaRao-17130F?style=for-the-badge&logo=github&logoColor=D97757&labelColor=0B0906)](https://github.com/MAdityaRao)
+[![Email](https://img.shields.io/badge/Email-madityarao5%40gmail.com-17130F?style=for-the-badge&logo=gmail&logoColor=D97757&labelColor=0B0906)](mailto:madityarao5@gmail.com)
 
 </div>
 
@@ -241,7 +241,7 @@ This same shape — frontend, token API, independent agent, shared database, das
 
 <br/>
 
-<sub>Live via <a href="https://github.com/lowlighter/metrics">lowlighter/metrics</a> · gold/white themed to match the portfolio accent</sub>
+<sub>Live via <a href="https://github.com/lowlighter/metrics">lowlighter/metrics</a> · terracotta/charcoal themed to match the portfolio</sub>
 
 </div>
 
@@ -264,14 +264,14 @@ If you're working on voice AI that needs to hold up under real call volume, LLM 
 
 <div align="center">
 
-[![Email](https://img.shields.io/badge/madityarao5%40gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:madityarao5@gmail.com)
-[![Portfolio](https://img.shields.io/badge/resume--web--liard.vercel.app-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://resume-web-liard.vercel.app/)
-[![GitHub](https://img.shields.io/badge/MAdityaRao-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/MAdityaRao)
+[![Email](https://img.shields.io/badge/madityarao5%40gmail.com-17130F?style=for-the-badge&logo=gmail&logoColor=D97757&labelColor=0B0906)](mailto:madityarao5@gmail.com)
+[![Portfolio](https://img.shields.io/badge/resume--web--liard.vercel.app-17130F?style=for-the-badge&logo=vercel&logoColor=D97757&labelColor=0B0906)](https://resume-web-liard.vercel.app/)
+[![GitHub](https://img.shields.io/badge/MAdityaRao-17130F?style=for-the-badge&logo=github&logoColor=D97757&labelColor=0B0906)](https://github.com/MAdityaRao)
 
 <br/>
 
-![Profile Views](https://komarev.com/ghpvc/?username=MAdityaRao&color=F5A623&style=flat-square&label=Profile+Views)
+![Profile Views](https://komarev.com/ghpvc/?username=MAdityaRao&color=D97757&style=flat-square&label=Profile+Views)
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f0f0f,100:1a1a1a&height=100&section=footer"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:17130F,100:1F1911&height=100&section=footer"/>
 
 </div>

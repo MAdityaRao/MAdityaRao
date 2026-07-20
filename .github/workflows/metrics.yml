@@ -38,7 +38,7 @@ jobs:
 
           config_timezone: Asia/Kolkata
           config_display: large
-          config_gemoji: img
+          config_gemoji: no
           config_base64: yes
 
           # === Terracotta / charcoal theme — matched to resume-web-liard.vercel.app ===
@@ -124,7 +124,11 @@ jobs:
           plugin_habits_from: 200
           plugin_habits_days: 14
           plugin_habits_facts: yes
-          plugin_habits_charts: yes
+          # Chart rendering here depends on a native "canvas" build, which
+          # regularly fails to compile on ubuntu-latest runners and was the
+          # cause of this plugin's "Unexpected error". Facts (text stats)
+          # still render fine without it.
+          plugin_habits_charts: no
 
           plugin_topics: yes
           plugin_topics_mode: icons
@@ -133,7 +137,10 @@ jobs:
           plugin_activity: yes
           plugin_activity_limit: 5
           plugin_activity_days: 14
-          plugin_activity_visibility: all
+          # "all" also pulls org-scoped events, which errors out if any org
+          # you belong to enforces SSO the token isn't authorized for.
+          # "public" is enough for a portfolio README and won't fail on that.
+          plugin_activity_visibility: public
 
           plugin_notable: yes
           plugin_notable_from: repositories
