@@ -23,14 +23,15 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Generate GitHub Metrics
         uses: lowlighter/metrics@latest
         with:
           # === Authentication ===
-          # Classic PAT (ghp_*) with: repo, read:user, read:org
-          # Add as repository secret: METRICS_TOKEN
-          token: ${{ secrets.METRICS_TOKEN }}
+          # Uses METRICS_TOKEN (Classic PAT with repo, read:user, read:org)
+          # Falls back to GITHUB_TOKEN if METRICS_TOKEN is not available
+          token: ${{ secrets.METRICS_TOKEN || secrets.GITHUB_TOKEN }}
           user: MAdityaRao
           filename: github-metrics.svg
 
@@ -47,7 +48,6 @@ jobs:
           config_base64: yes
 
           # === Terracotta / Charcoal Theme ===
-          # Scoped to specific classes to avoid painting over heatmap cells
           extras_css: |
             .items-wrapper {
               background-color: #17130F;
@@ -134,6 +134,8 @@ jobs:
           plugin_followup_sections: pr, issue
 
       - name: Commit and push metrics
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -142,5 +144,5 @@ jobs:
             echo "No changes to commit"
           else
             git commit -m "chore: update github metrics [skip ci]"
-            git push
+            git push https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git HEAD:${{ github.ref_name }}
           fi
