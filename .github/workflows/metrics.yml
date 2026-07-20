@@ -20,10 +20,7 @@ jobs:
         with:
           # === Auth ===
           # MUST be a CLASSIC personal access token (starts with ghp_), added as a
-          # REPOSITORY secret (Settings -> Secrets and variables -> Actions -> Secrets
-          # tab -> "New repository secret"), not an Environment secret, and not a
-          # fine-grained token (those aren't supported by this action at all).
-          # See SETUP_INSTRUCTIONS.md.
+          # REPOSITORY secret, scoped to at least: repo, read:user, read:org.
           token: ${{ secrets.METRICS_TOKEN }}
           user: MAdityaRao
           filename: github-metrics.svg
@@ -31,45 +28,84 @@ jobs:
           # === Base panel ===
           base: header, activity, community, repositories
 
+          # Dropped the flat "calendar" plugin — it was rendering a second,
+          # smaller heatmap directly under the isocalendar block, which is
+          # almost certainly the "duplicate/broken layout" you were seeing.
+          # isocalendar alone covers the same data.
+          config_order: >-
+            header, isocalendar, languages, habits, activity,
+            notable, topics, followup, lines, stars, community, repositories
+
           config_timezone: Asia/Kolkata
           config_display: large
           config_gemoji: img
           config_base64: yes
 
-          # === Gold / white theme ===
-          # Theming this action isn't done through config_theme_* flags (those don't
-          # exist) — it's done by injecting raw CSS that overrides the template's
-          # colors. This repaints the default dark template in amber/white to match
-          # the portfolio's accent.
+          # === Terracotta / charcoal theme — matched to resume-web-liard.vercel.app ===
+          # Same principle as before: scope every color to a known class
+          # instead of a blanket `svg { fill }` rule, so icons and heatmap
+          # cells never get silently painted over their own background.
           extras_css: |
+            .items-wrapper {
+              background-color: #17130F;
+              color: #A8A29E;
+              padding: 22px 28px;
+              border-radius: 16px;
+            }
+
+            /* Headings */
+            h1, h2, h3, .title, [class*="title"] {
+              color: #D97757 !important;
+              letter-spacing: 0.02em;
+            }
+            h1 svg, h2 svg, h3 svg { fill: #D97757 !important; }
+
+            /* Body text */
+            .field, .repository .infos, .activity .details,
+            .field.language.details small, .field.license.details small {
+              color: #A8A29E;
+            }
+            .repository .description { color: #7C7670; }
+
+            /* Repo / issue links: swap GitHub's default blue for the accent */
+            .repository .name span:first-child,
+            .activity .issue {
+              color: #D97757 !important;
+            }
+            .repository .name span:last-child { color: #6B6560; }
+
+            /* Field icons (not the isocalendar grid — that keeps its own
+               heatmap coloring below) */
+            .field > svg, .octicon {
+              fill: #D97757 !important;
+            }
+
+            /* Organization / topic chips — rounded pill, thin accent
+               border, matches the "LLM SYSTEMS · VOICE AI · ..." badge
+               on the site instead of a solid filled tag */
+            .contribution.organization, .topic {
+              border: 1px solid #D9775555 !important;
+              background-color: #D9775514 !important;
+              color: #D97757 !important;
+              border-radius: 999px !important;
+            }
+
+            /* Isometric calendar heatmap: terracotta intensity scale */
             :root {
-              --color-content-default: #F2F2F2 !important;
-              --color-fill-default: #F5A623 !important;
-              --color-fill-alt: #F5A623 !important;
-              --color-border-default: #F5A62355 !important;
+              --color-calendar-graph-day-bg: #201A15;
+              --color-calendar-graph-day-border: #D9775722;
+              --color-calendar-graph-day-L1-bg: #3E2A1E;
+              --color-calendar-graph-day-L2-bg: #6B4530;
+              --color-calendar-graph-day-L3-bg: #B05F3D;
+              --color-calendar-graph-day-L4-bg: #D97757;
             }
-            svg, .metrics-container-bg {
-              fill: #0D1117 !important;
-            }
-            text, tspan {
-              fill: #F2F2F2 !important;
-            }
-            text.large, h1, h2, h3, .title,
-            [class*="title"], [class*="header"] {
-              fill: #F5A623 !important;
-              color: #F5A623 !important;
-            }
-            rect, path, circle, polygon {
-              stroke: #F5A62355;
-            }
-            .octicon, svg[class*="icon"] {
-              fill: #F5A623 !important;
-            }
+            svg.calendar text, .isocalendar text { fill: #A8A29E; }
 
-          # === Plugins (mirrors the reference: calendar, languages, activity, topics) ===
-          plugin_calendar: yes
-          plugin_calendar_limit: 1
+            /* Error banner: keep legible instead of grey-on-dark if a
+               plugin ever fails */
+            .field.error, .field.error svg { color: #E5484D !important; fill: #E5484D !important; }
 
+          # === Plugins ===
           plugin_isocalendar: yes
           plugin_isocalendar_duration: half-year
 
@@ -79,6 +115,10 @@ jobs:
           plugin_languages_limit: 8
           plugin_languages_threshold: 0%
           plugin_languages_details: percentage
+          # Terracotta ramp instead of GitHub's stock per-language colors —
+          # first four languages step through the accent, rest fall back to
+          # a neutral so the bar doesn't turn into a rainbow.
+          plugin_languages_colors: 0:#D97757, 1:#C0673F, 2:#A6572F, 3:#8C471F, default:#4A443E
 
           plugin_habits: yes
           plugin_habits_from: 200
@@ -93,7 +133,7 @@ jobs:
           plugin_activity: yes
           plugin_activity_limit: 5
           plugin_activity_days: 14
-          plugin_activity_visibility: public
+          plugin_activity_visibility: all
 
           plugin_notable: yes
           plugin_notable_from: repositories
@@ -101,10 +141,11 @@ jobs:
 
           plugin_lines: yes
 
+          # 0 previously — an unbounded stars list is one of the more
+          # common causes of a silent timeout/error on this action. Capped
+          # it to a real number.
           plugin_stars: yes
-          plugin_stars_limit: 0
+          plugin_stars_limit: 6
 
           plugin_followup: yes
           plugin_followup_sections: pr, issue
-
-          
