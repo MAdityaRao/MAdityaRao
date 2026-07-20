@@ -1,4 +1,3 @@
-
 <div align="center">
 <!-- Animated header with gradient wave -->
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:17130F,30:2A1F17,60:3D2A1E,100:D97757&height=280&section=header&text=Aditya%20Rao&fontSize=75&fontColor=D97757&animation=fadeIn&fontAlignY=30&desc=Systems%20Engineer%20%E2%80%94%20Voice%20AI%20%C2%B7%20Production%20Backends%20%C2%B7%20LLM%20Infrastructure&descAlignY=55&descSize=16&descColor=A8A29E"/>
@@ -9,9 +8,15 @@
 </a>
 <br/><br/>
 <!-- Contact badges -->
-https://resume-web-liard.vercel.app/
-https://github.com/MAdityaRao
-mailto:madityarao5@gmail.com
+<a href="https://resume-web-liard.vercel.app/">
+<img src="https://img.shields.io/badge/Portfolio-17130F?style=for-the-badge&logo=vercel&logoColor=D97757&labelColor=0B0906" alt="Portfolio"/>
+</a>
+<a href="https://github.com/MAdityaRao">
+<img src="https://img.shields.io/badge/GitHub-17130F?style=for-the-badge&logo=github&logoColor=D97757&labelColor=0B0906" alt="GitHub"/>
+</a>
+<a href="mailto:madityarao5@gmail.com">
+<img src="https://img.shields.io/badge/Email-17130F?style=for-the-badge&logo=gmail&logoColor=D97757&labelColor=0B0906" alt="Email"/>
+</a>
 </div>
 <br/>
 <!-- Animated SVG divider with terracotta pulse -->
@@ -364,18 +369,20 @@ GitHub Metrics
 <br/>
 Repositories
 <div align="center">
-Table
-Repo	Description
-https://github.com/MAdityaRao/resume_web	Portfolio with live voice agent "Priya"
-https://github.com/MAdityaRao/torq_web_agent	Hotel voice receptionist + dashboard
-https://github.com/MAdityaRao/Mvp_ins	Insurance voice agent "Arria"
-https://github.com/MAdityaRao/Resume_agent	Resume-grounded voice interviewer
-https://github.com/MAdityaRao/arecanut_lstm	Arecanut price forecasting — LSTM
-https://github.com/MAdityaRao/arecanut_rnn	Arecanut price forecasting — SimpleRNN
-https://github.com/MAdityaRao/nurse_note_ai	Nursing/clinical note AI
-https://github.com/MAdityaRao/pdubelman_temple	Temple website
-https://github.com/MAdityaRao/farm_finance	Agricultural finance
-https://github.com/MAdityaRao/java_dsa	DSA practice in Java
+
+| Repo | Description |
+|:-----|:------------|
+| [resume_web](https://github.com/MAdityaRao/resume_web) | Portfolio with live voice agent "Priya" |
+| [torq_web_agent](https://github.com/MAdityaRao/torq_web_agent) | Hotel voice receptionist + dashboard |
+| [Mvp_ins](https://github.com/MAdityaRao/Mvp_ins) | Insurance voice agent "Arria" |
+| [Resume_agent](https://github.com/MAdityaRao/Resume_agent) | Resume-grounded voice interviewer |
+| [arecanut_lstm](https://github.com/MAdityaRao/arecanut_lstm) | Arecanut price forecasting — LSTM |
+| [arecanut_rnn](https://github.com/MAdityaRao/arecanut_rnn) | Arecanut price forecasting — SimpleRNN |
+| [nurse_note_ai](https://github.com/MAdityaRao/nurse_note_ai) | Nursing/clinical note AI |
+| [pdubelman_temple](https://github.com/MAdityaRao/pdubelman_temple) | Temple website |
+| [farm_finance](https://github.com/MAdityaRao/farm_finance) | Agricultural finance |
+| [java_dsa](https://github.com/MAdityaRao/java_dsa) | DSA practice in Java |
+
 </div>
 <br/>
 <!-- Animated SVG divider -->
