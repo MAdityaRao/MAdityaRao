@@ -29,8 +29,8 @@ jobs:
         uses: lowlighter/metrics@latest
         with:
           # === Authentication ===
-          # Uses METRICS_TOKEN (Classic PAT with repo, read:user, read:org)
-          # Falls back to GITHUB_TOKEN if METRICS_TOKEN is not available
+          # Primary: METRICS_TOKEN (Classic PAT with repo, read:user, read:org)
+          # Fallback: GITHUB_TOKEN (auto-generated, limited scope)
           token: ${{ secrets.METRICS_TOKEN || secrets.GITHUB_TOKEN }}
           user: MAdityaRao
           filename: github-metrics.svg
