@@ -1,50 +1,53 @@
-name: Metrics
+name: GitHub Metrics
+
 on:
-  # Refresh once per day
   schedule:
     - cron: "0 3 * * *"
-  # Also allow manual trigger from the Actions tab
   workflow_dispatch:
-  # Refresh on push to main so it's up to date right after you commit
   push:
-    branches:
-      - main
+    branches: [main]
+
+concurrency:
+  group: metrics-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   github-metrics:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     permissions:
       contents: write
+
     steps:
-      - uses: lowlighter/metrics@latest
+      - name: Checkout repository
+        uses: actions/checkout@v4
         with:
-          # === Auth ===
-          # MUST be a CLASSIC personal access token (starts with ghp_), added as a
-          # REPOSITORY secret, scoped to at least: repo, read:user, read:org.
+          fetch-depth: 0
+
+      - name: Generate GitHub Metrics
+        uses: lowlighter/metrics@latest
+        with:
+          # === Authentication ===
+          # Classic PAT (ghp_*) with: repo, read:user, read:org
+          # Add as repository secret: METRICS_TOKEN
           token: ${{ secrets.METRICS_TOKEN }}
           user: MAdityaRao
           filename: github-metrics.svg
 
-          # === Base panel ===
+          # === Base Configuration ===
           base: header, activity, community, repositories
 
-          # Dropped the flat "calendar" plugin — it was rendering a second,
-          # smaller heatmap directly under the isocalendar block, which is
-          # almost certainly the "duplicate/broken layout" you were seeing.
-          # isocalendar alone covers the same data.
           config_order: >-
-            header, isocalendar, languages, habits, activity,
-            notable, topics, followup, lines, stars, community, repositories
+            header, isocalendar, languages, notable, topics,
+            followup, lines, stars, community, repositories
 
           config_timezone: Asia/Kolkata
           config_display: large
           config_gemoji: no
           config_base64: yes
 
-          # === Terracotta / charcoal theme — matched to resume-web-liard.vercel.app ===
-          # Same principle as before: scope every color to a known class
-          # instead of a blanket `svg { fill }` rule, so icons and heatmap
-          # cells never get silently painted over their own background.
+          # === Terracotta / Charcoal Theme ===
+          # Scoped to specific classes to avoid painting over heatmap cells
           extras_css: |
             .items-wrapper {
               background-color: #17130F;
@@ -53,36 +56,28 @@ jobs:
               border-radius: 16px;
             }
 
-            /* Headings */
             h1, h2, h3, .title, [class*="title"] {
               color: #D97757 !important;
               letter-spacing: 0.02em;
             }
             h1 svg, h2 svg, h3 svg { fill: #D97757 !important; }
 
-            /* Body text */
             .field, .repository .infos, .activity .details,
             .field.language.details small, .field.license.details small {
               color: #A8A29E;
             }
             .repository .description { color: #7C7670; }
 
-            /* Repo / issue links: swap GitHub's default blue for the accent */
             .repository .name span:first-child,
             .activity .issue {
               color: #D97757 !important;
             }
             .repository .name span:last-child { color: #6B6560; }
 
-            /* Field icons (not the isocalendar grid — that keeps its own
-               heatmap coloring below) */
             .field > svg, .octicon {
               fill: #D97757 !important;
             }
 
-            /* Organization / topic chips — rounded pill, thin accent
-               border, matches the "LLM SYSTEMS · VOICE AI · ..." badge
-               on the site instead of a solid filled tag */
             .contribution.organization, .topic {
               border: 1px solid #D9775555 !important;
               background-color: #D9775514 !important;
@@ -90,7 +85,6 @@ jobs:
               border-radius: 999px !important;
             }
 
-            /* Isometric calendar heatmap: terracotta intensity scale */
             :root {
               --color-calendar-graph-day-bg: #201A15;
               --color-calendar-graph-day-border: #D9775722;
@@ -101,9 +95,10 @@ jobs:
             }
             svg.calendar text, .isocalendar text { fill: #A8A29E; }
 
-            /* Error banner: keep legible instead of grey-on-dark if a
-               plugin ever fails */
-            .field.error, .field.error svg { color: #E5484D !important; fill: #E5484D !important; }
+            .field.error, .field.error svg {
+              color: #E5484D !important;
+              fill: #E5484D !important;
+            }
 
           # === Plugins ===
           plugin_isocalendar: yes
@@ -115,20 +110,7 @@ jobs:
           plugin_languages_limit: 8
           plugin_languages_threshold: 0%
           plugin_languages_details: percentage
-          # Terracotta ramp instead of GitHub's stock per-language colors —
-          # first four languages step through the accent, rest fall back to
-          # a neutral so the bar doesn't turn into a rainbow.
           plugin_languages_colors: 0:#D97757, 1:#C0673F, 2:#A6572F, 3:#8C471F, default:#4A443E
-
-          plugin_habits: yes
-          plugin_habits_from: 200
-          plugin_habits_days: 14
-          plugin_habits_facts: yes
-          # Chart rendering here depends on a native "canvas" build, which
-          # regularly fails to compile on ubuntu-latest runners and was the
-          # cause of this plugin's "Unexpected error". Facts (text stats)
-          # still render fine without it.
-          plugin_habits_charts: no
 
           plugin_topics: yes
           plugin_topics_mode: icons
@@ -137,9 +119,6 @@ jobs:
           plugin_activity: yes
           plugin_activity_limit: 5
           plugin_activity_days: 14
-          # "all" also pulls org-scoped events, which errors out if any org
-          # you belong to enforces SSO the token isn't authorized for.
-          # "public" is enough for a portfolio README and won't fail on that.
           plugin_activity_visibility: public
 
           plugin_notable: yes
@@ -148,11 +127,20 @@ jobs:
 
           plugin_lines: yes
 
-          # 0 previously — an unbounded stars list is one of the more
-          # common causes of a silent timeout/error on this action. Capped
-          # it to a real number.
           plugin_stars: yes
           plugin_stars_limit: 6
 
           plugin_followup: yes
           plugin_followup_sections: pr, issue
+
+      - name: Commit and push metrics
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add github-metrics.svg
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: update github metrics [skip ci]"
+            git push
+          fi
