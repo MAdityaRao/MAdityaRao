@@ -366,17 +366,7 @@ This same shape powers the hotel receptionist, the outbound dialer, the insuranc
  GitHub Metrics
 <div align="center">
 <!-- GitHub Stats Cards -->
-<table>
-<tr>
-<td>
-<img src="https://github-readme-stats.vercel.app/api?username=MAdityaRao&show_icons=true&theme=gruvbox&bg_color=17130F&title_color=D97757&text_color=A8A29E&icon_color=D97757&border_color=3D2A1E&hide_border=false&border_radius=10" alt="GitHub Stats" />
-</td>
-<td>
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=MAdityaRao&layout=compact&theme=gruvbox&bg_color=17130F&title_color=D97757&text_color=A8A29E&icon_color=D97757&border_color=3D2A1E&hide_border=false&border_radius=10" alt="Top Languages" />
-</td>
-</tr>
-</table>
-<br/>
+
 <!-- GitHub Streak -->
 <img src="https://github-readme-streak-stats.herokuapp.com/?user=MAdityaRao&theme=gruvbox&background=17130F&stroke=D97757&ring=D97757&fire=D97757&currStreakNum=A8A29E&sideNums=A8A29E&currStreakLabel=D97757&sideLabels=D97757&dates=78716C&border=3D2A1E&border_radius=10" alt="GitHub Streak" />
 <br/><br/>
