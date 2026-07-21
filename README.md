@@ -17,7 +17,7 @@
 <a href="https://github.com/MAdityaRao">
   <img src="https://img.shields.io/badge/GitHub-17130F?style=for-the-badge&logo=github&logoColor=D97757&labelColor=0B0906" alt="GitHub"/>
 </a>
-<a href="https://linkedin.com/in/madityarao">
+<a href="https://www.linkedin.com/in/aditya-rao-81832132b/">
   <img src="https://img.shields.io/badge/LinkedIn-17130F?style=for-the-badge&logo=linkedin&logoColor=D97757&labelColor=0B0906" alt="LinkedIn"/>
 </a>
 <br/><br/>
