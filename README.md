@@ -111,7 +111,7 @@ Handles real hotel operations — availability, bookings, cancellations, policy 
 Also solved: spoken phone-number normalization ("double nine," "triple five") into a canonical digit string before it ever touches the database.
 Stack: LiveKit Agents · GPT-4o-mini · Sarvam STT/TTS · FastAPI · PostgreSQL · asyncpg · OpenTelemetry
  Lesson: race conditions in voice systems don't show up in solo testing — I only found this one by deliberately load-testing with concurrent simulated callers.
-📁 Repo
+ Repo
 </td>
 <td width="50%" valign="top">
  Hotel Management Dashboard
@@ -121,12 +121,12 @@ Zero-sync-layer operational view
 A Next.js dashboard sharing its database directly with the voice receptionist — a voice booking appears on staff screens instantly, because there's no sync layer to begin with.
 Audited an inherited codebase and fixed 23 production issues: ghost bookings from non-atomic writes, incorrect occupancy from miscounted cancellations, and checkout logic that failed to release rooms.
 Stack: Next.js · TypeScript · TailwindCSS · Drizzle ORM · Neon PostgreSQL · Recharts · ISR
-📁 Repo
+ Repo
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
-📞 AI Outbound Sales Dialer
+ AI Outbound Sales Dialer
 <img src="https://img.shields.io/badge/Status-Live-D97757?style=flat-square&labelColor=0B0906" alt="Live"/>
 <img src="https://img.shields.io/badge/Type-Automation-D97757?style=flat-square&labelColor=0B0906" alt="Automation"/>
 Fully automated calling pipeline
@@ -140,7 +140,7 @@ Capabilities:
 Stack: Python · LiveKit SIP · Plivo · GPT-4o-mini · Sarvam STT/TTS · PostgreSQL · asyncpg
 </td>
 <td width="50%" valign="top">
-📚 NITK Library Voice Assistant
+ NITK Library Voice Assistant
 <img src="https://img.shields.io/badge/Status-Deployed-D97757?style=flat-square&labelColor=0B0906" alt="Deployed"/>
 <img src="https://img.shields.io/badge/Type-Kiosk-D97757?style=flat-square&labelColor=0B0906" alt="Kiosk"/>
 Ritu (voice) + Aria (chat)
@@ -159,17 +159,17 @@ IRDAI-grounded policy servicing
 Handles policy lookup, claim status, waiting-period explanations, cashless claim guidance, and NCB queries — with proactive escalation: denied claims and regulatory disputes route to a human by default, not on request.
 Deliberately tuned to a calmer, more measured conversational tone than the hotel/sales agents — a support context where getting things wrong has real consequences.
 Stack: LiveKit Agents · GPT-4o-mini · Deepgram STT · Deepgram Aura TTS · PostgreSQL
-📁 Repo
+ Repo
 </td>
 <td width="50%" valign="top">
-🎤 Resume-Grounded Interview Agent
+ Resume-Grounded Interview Agent
 <img src="https://img.shields.io/badge/Status-Live-D97757?style=flat-square&labelColor=0B0906" alt="Live"/>
 <img src="https://img.shields.io/badge/Type-Interview%20Bot-D97757?style=flat-square&labelColor=0B0906" alt="Interview Bot"/>
 Sub-500ms voice interviewer
 Answers strictly from a candidate's resume + target JD, with hallucination prevention as the central design constraint, not an afterthought. Accepts a live JD over a data channel and adapts mid-conversation.
 Hit sub-500ms round-trip latency using Cartesia for both STT and TTS, and kept grounding lightweight — direct retrieval over the resume/JD text instead of a heavier RAG pipeline.
 Stack: LiveKit Agents · GPT-4o-mini · Cartesia STT/TTS · Docker · Next.js
-📁 Repo · 🌐 Live Demo
+ Repo ·  Live Demo
 </td>
 </tr>
 </table>
