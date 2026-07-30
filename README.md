@@ -8,7 +8,7 @@
 </a>
 <br/><br/>
 <!-- Animated contact badges with hover glow -->
-<a href="https://resume-web-liard.vercel.app/">
+<a href="https://aditya-rao-liard.vercel.app/">
   <img src="https://img.shields.io/badge/Portfolio-17130F?style=for-the-badge&logo=vercel&logoColor=D97757&labelColor=0B0906" alt="Portfolio"/>
 </a>
 <a href="mailto:madityarao5@gmail.com">
